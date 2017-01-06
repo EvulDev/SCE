@@ -1,0 +1,6 @@
+
+#include "SCE\CfgSCE.hpp"
+
+class CfgFunctions {
+    #include "SCE\CfgFunctions.hpp"
+};
