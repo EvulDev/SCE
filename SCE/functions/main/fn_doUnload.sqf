@@ -6,6 +6,6 @@ params [
 ];
 
 _vehicle vehicleChat "All Civilian Unloaded";
-_vehicle setVariable ["sce_hasContainerFull",false];
+_vehicle setVariable [QGVAR(hasContainerFull),false];
 
 _vehicle call FUNC(removeSimulation);

@@ -2,6 +2,7 @@ class SCE {
     class main {
         file = "SCE\functions\main";
         class init {};
+        class debug {};
         class addLoadOption {};
         class doLoad {};
         class doUnload {};
