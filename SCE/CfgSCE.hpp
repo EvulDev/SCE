@@ -1,5 +1,5 @@
 class CfgSCE {
-    debugMode                       = true;
+    debugMode                       = 1;
     
     civilianLoadTime                = 3;            // Seconds between each civilian load.
 

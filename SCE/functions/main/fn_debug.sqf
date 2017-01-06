@@ -1,10 +1,7 @@
 
 #include "..\script_component.hpp";
 
-params ["_message"];
-
-_debugMode = getText (missionConfigFile >> "myMissionConfig" >> "CfgSCE" >> "debugMode");
-
-if (_debugMode) then {
+if (getNumber (missionConfigFile >> "CfgSCE" >> "debugMode") == 1) then {
+    params ["_message"];
     diag_log formatText ["[SCE] Info: %1", _message];
 };
