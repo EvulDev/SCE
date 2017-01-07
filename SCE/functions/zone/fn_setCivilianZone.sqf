@@ -28,18 +28,23 @@ if (_showmarker) then {
 _markerName setMarkerColor "ColorCIV";
 
 if (getNumber (missionConfigFile >> "CfgSCE" >> "debugMode") == 1) then {
-    params ["_markerName","_population","_debugMarkerName","_debugMarker","_debugMarkerName"];
-    _markerName setMarkerAlpha 1;
+    while {true} do {
+        params ["_markerName","_population","_debugMarkerName","_debugMarker","_debugMarkerName"];
+        _markerName setMarkerAlpha 1;
 
-    _debugMarkerName = format ["%1_debug", _markerName];
-    
-    _debugMarker = createMarker [_debugMarkerName,[0,0]];
-    _debugMarkerName setMarkerPos getMarkerPos _markerName;
-    _debugMarker = _debugMarkerName setMarkerText (format ["%1 | Population: %2", _markerName, _population]);
-    _debugMarker = _debugMarkerName setMarkerType "c_unknown";
-    _debugMarker = _debugMarkerName setMarkerColor "ColorBlack";
-    sleep 180;
+        _debugMarkerName = format ["%1_debug", _markerName];
+        
+        _debugMarker = createMarker [_debugMarkerName,[0,0]];
+        _debugMarkerName setMarkerPos getMarkerPos _markerName;
+        _debugMarker = _debugMarkerName setMarkerText (format ["%1 | Population: %2", _markerName, _population]);
+        _debugMarker = _debugMarkerName setMarkerType "c_unknown";
+        _debugMarker = _debugMarkerName setMarkerColor "ColorBlack";
+        sleep 180;
+    };
 };
+
+GVAR(allZones) pushBack _markerName
+
 /*
 for "_" from 0 to 8 do {
     DEC(M_pool);
