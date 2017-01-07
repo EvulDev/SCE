@@ -7,7 +7,7 @@ params [
 
 //Load
 _conditionLoad = {
-    !((_this select 0) getVariable [QGVAR(hasContainerFull),false]);
+    !((_this select 0) getVariable [QGVAR(ContainerFull),false]);
 };
 _statementLoad = {
     (_this select 0) call FUNC(doLoad);
@@ -18,7 +18,7 @@ _actionLoad = ["Load Civilians","Load Civilians","",_statementLoad,_conditionLoa
 
 //Unload
 _conditionUnload = {
-    (_this select 0) getVariable [QGVAR(hasContainerFull),true];
+    (_this select 0) getVariable [QGVAR(ContainerFull),true];
 };
 _statementUnload = {
     (_this select 0) call FUNC(doUnload);

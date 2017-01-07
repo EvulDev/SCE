@@ -14,5 +14,6 @@ class SCE {
     };
     class zone {
         file = "SCE\functions\zone";
+        class setCivilianZone {};
     };
 };
