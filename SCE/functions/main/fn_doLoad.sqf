@@ -5,8 +5,7 @@ params [
     ["_vehicle", objNull, [objNull]]
 ];
 
-
 _vehicle vehicleChat "All Civilian Loaded";
-_vehicle setVariable [QGVAR(hasContainerFull),true];
+_vehicle setVariable [QGVAR(ContainerFull),true];
 
 _vehicle call FUNC(doSimulation);

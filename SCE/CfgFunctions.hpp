@@ -15,5 +15,6 @@ class SCE {
     class zone {
         file = "SCE\functions\zone";
         class setCivilianZone {};
+        class checkZone { postInit = 1; };
     };
 };
