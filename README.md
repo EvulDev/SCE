@@ -8,3 +8,7 @@ In addition the script should handle incoming ordinance or fire within the civil
 ## Requires
 - CBA 
 - ACE
+
+## Credits
+- commy2
+- 654wak654

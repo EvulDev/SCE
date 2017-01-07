@@ -3,11 +3,11 @@
 
 params [
     ["_vehicle", objNull, [objNull]],
-    ["_loadAmount", 25]
+    ["_amount", 0]
 ];
 
 _vehicle setVariable [QGVAR(ContainerFull), false];
-[_vehicle,_loadAmount] call FUNC(addLoadOption);
+[_vehicle,_amount] call FUNC(addLoadOption);
 
 ["vehicle", {
     params ["_unit", "_vehicle"];
@@ -16,3 +16,6 @@ _vehicle setVariable [QGVAR(ContainerFull), false];
         hint "The cargo is full of civilians you don't fitt.";
     };
 }] call CBA_fnc_addPlayerEventHandler;
+
+//_cargoPool = 0;
+//_cargoMax = _amount;

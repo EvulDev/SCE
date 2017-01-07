@@ -1,7 +1,7 @@
 class SCE {
     class main {
         file = "SCE\functions\main";
-        class init { postInit = 1; };
+        class init { preInit = 1; };
         class debug {};
         class addLoadOption {};
         class doLoad {};

@@ -3,12 +3,13 @@
 
 params [
     ["_vehicle", objNull, [objNull]],
-    ["_loadAmount", 0]
+    ["_amount", 0]
 ];
 
 _vehicle setVariable [QGVAR(ContainerFull),true];
 _vehicle call FUNC(doSimulation);
 
-[_vehicle,"_loadAmount"] call FUNC(doMoveCargo);
+//SUB(_PopulationPool,_amount);
+//ADD(_cargoPool,_amount);
 
 _vehicle vehicleChat "All Civilian Loaded";
