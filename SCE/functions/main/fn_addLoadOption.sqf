@@ -12,8 +12,6 @@ _conditionLoad = {
 };
 _statementLoad = {
     (_this select 0) call FUNC(doLoad);
-    _InZone = call FUNC(checkZone);
-    systemChat str [_InZone]
 };
 _actionLoad = ["Load Civilians","Load Civilians","",_statementLoad,_conditionLoad] call ace_interact_menu_fnc_createAction;
 [(typeOf _vehicle), 1, ["ACE_SelfActions"], _actionLoad] call ace_interact_menu_fnc_addActionToClass;
