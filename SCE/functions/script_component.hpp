@@ -9,3 +9,6 @@
 #define QGVAR(var) QUOTE(GVAR(var))
 #define FUNC(var) TRIPLES(PREFIX,fnc,var)
 #define QFUNC(var) QUOTE(FUNC(var))
+
+#define ADD(var1,var2) var1 = (var1) + (var2)
+#define SUB(var1,var2) var1 = (var1) - (var2)

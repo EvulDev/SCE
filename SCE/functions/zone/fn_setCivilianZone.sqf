@@ -1,8 +1,4 @@
 /*
-this function should set a civilian zone
-It should set the size (via marker) that is turned invissable
-It should also keep tack of city civilian count.
-
 Random damage inside the zone killes civilians
     Gun shot 0.5% chanse of killing a civilian
     Ordinance 5% chanse of killing a civilian
@@ -15,9 +11,10 @@ Random damage inside the zone killes civilians
 
 params ["_markerName",["_population",100],["_showmarker",false]];
 
-if (_markerName == "") exitWith { systemChat "WARNING: No marker found for civilian zone!" };
+if (_markerName == "") exitWith { systemChat "WARNING: No marker name found for civilian zone!" };
 
-//_PopulationPool = _population;
+//_ZonePopulation setVariable [_markerName,_population];
+
 
 if (_showmarker) then {
     _markerName setMarkerAlpha 1;
@@ -42,7 +39,3 @@ if (getNumber (missionConfigFile >> "CfgSCE" >> "debugMode") == 1) then {
 
 GVAR(allZones) pushBack _markerName;
 
-/*
-for "_" from 0 to 8 do {
-    DEC(M_pool);
-};*/
